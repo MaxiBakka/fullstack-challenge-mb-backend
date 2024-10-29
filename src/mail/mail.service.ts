@@ -13,8 +13,7 @@ export class MailService {
     private readonly configService: ConfigService<AllConfigType>,
   ) {}
 
-  async userSignUp(mailData: MailData): Promise<void> {
-    const i18n = I18nContext.current();
+  async sendPatientRegistrationEmail(mailData: MailData): Promise<void> {
     const patientCreationTitle = 'Patient registration';
     let text1 = 'Hey!';
     let text2 = 'You have registered a patient in the system'
