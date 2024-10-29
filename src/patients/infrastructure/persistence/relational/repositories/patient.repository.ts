@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repository } from 'typeorm';
-import { PatientEntity } from '../entities/Patient.entity';
+import { PatientEntity } from '../entities/patient.entity';
 import { NullableType } from '../../../../../utils/types/nullable.type';
 import { Patient } from '../../../../domain/patient';
 import { PatientRepository } from '../../patient.repository';
