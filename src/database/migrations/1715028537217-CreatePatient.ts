@@ -12,7 +12,7 @@ export class CreatePatient1715028537217 implements MigrationInterface {
     );
     await queryRunner.query(`
       CREATE TABLE patient (
-                id CHAR(36) NOT NULL PRIMARY KEY,
+                id CHAR(36) NOT NULL PRIMARY KEY DEFAULT (UUID()),
                 email VARCHAR(255) UNIQUE,
                 firstName VARCHAR(255),
                 lastName VARCHAR(255),
