@@ -7,7 +7,9 @@ import fileConfig from './files/config/file.config';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmConfigService } from './database/typeorm-config.service';
+import { MailModule } from './mail/mail.module';
 import { DataSource, DataSourceOptions } from 'typeorm';
+import { MailerModule } from './mailer/mailer.module';
 import { PatientsModule } from './patients/patients.module';
 
 const infrastructureDatabaseModule = TypeOrmModule.forRootAsync({
@@ -27,6 +29,8 @@ const infrastructureDatabaseModule = TypeOrmModule.forRootAsync({
     infrastructureDatabaseModule,
     PatientsModule,
     FilesModule,
+    MailModule,
+    MailerModule,
   ],
 })
 export class AppModule {}
