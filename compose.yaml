@@ -30,9 +30,9 @@ services:
     expose:
       - 1080
       - 1025
-    # ports:
-    #   - ${MAIL_CLIENT_PORT}:1080
-    #   - ${MAIL_PORT}:1025
+    ports:
+      - ${MAIL_CLIENT_PORT}:1080
+      - ${MAIL_PORT}:1025
 
   api:
     build:
