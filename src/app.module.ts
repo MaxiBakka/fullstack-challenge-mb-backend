@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import { FilesModule } from './files/files.module';
 import databaseConfig from './database/config/database.config';
 import appConfig from './config/app.config';
 import mailConfig from './mail/config/mail.config';
@@ -7,6 +8,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmConfigService } from './database/typeorm-config.service';
 import { DataSource, DataSourceOptions } from 'typeorm';
+import { PatientsModule } from './patients/patients.module';
 
 const infrastructureDatabaseModule = TypeOrmModule.forRootAsync({
   useClass: TypeOrmConfigService,
@@ -23,6 +25,8 @@ const infrastructureDatabaseModule = TypeOrmModule.forRootAsync({
       envFilePath: ['.env'],
     }),
     infrastructureDatabaseModule,
+    PatientsModule,
+    FilesModule,
   ],
 })
 export class AppModule {}
