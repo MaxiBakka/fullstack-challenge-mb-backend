@@ -48,7 +48,10 @@ NestJS TypeScript API.
    docker compose logs
    ```
 
-1. Open <http://localhost:3000/api/v1/patients>
+---
+## Endpoints
+ POST </api/v1/patients>
+ POST </api/v1/files/upload>
 
 ---
 
