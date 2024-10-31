@@ -50,8 +50,8 @@ NestJS TypeScript API.
 
 ---
 ## Endpoints
- POST </api/v1/patients>
- POST </api/v1/files/upload>
+ - POST `/api/v1/patients`
+ - POST `/api/v1/files/upload`
 
 ---
 
