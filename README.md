@@ -24,9 +24,39 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+NestJS TypeScript API.
 
-## Project setup
+## Quick run (MySQL + NodeMailer + NestJS)
+
+
+1. Go to folder, and copy `env-example` as `.env`.
+
+   ```bash
+   cd my-app/
+   cp env-example .env
+   ```
+
+1. Run containers
+
+   ```bash
+   docker compose up -d
+   ```
+
+1. For check status run
+
+   ```bash
+   docker compose logs
+   ```
+
+1. Open <http://localhost:3000/api/v1/patients>
+
+---
+
+## Links
+- API: <http://localhost:3000/api/v1/>
+- Maildev: <http://localhost:1080>
+
+## Setup
 
 ```bash
 $ npm install
@@ -43,17 +73,4 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
-```
-
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
